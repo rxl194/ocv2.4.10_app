@@ -1,0 +1,16 @@
+*.autosave
+*.pyc
+*.user
+*~
+.*.swp
+.DS_Store
+.sw[a-z]
+Ocv2_App_MSys/
+MSys/
+NB_MSys/
+VS10/
+Fedora/
+Ubuntu/
+VS13_x86/
+book_sample
+
