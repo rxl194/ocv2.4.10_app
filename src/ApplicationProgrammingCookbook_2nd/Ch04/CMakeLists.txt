@@ -5,14 +5,14 @@
 cmake_minimum_required(VERSION 2.8)
 
 # define the project name
-set(project_name "APCookBook_Chapter01")
+set(project_name "APCookBook_Chapter04")
 
 # set the project namee
 project("${project_name}")
 
 # add opencv package to the project
 find_package( OpenCV REQUIRED )
-MESSAGE(�OpenCV version : ${OpenCV_VERSION}�)
+MESSAGE("OpenCV version : ${OpenCV_VERSION}")
 
 # ${PROJECT_SOURCE_DIR} is the name of the root directory of the project
 # TO_NATIVE_PATH converts the path ${PROJECT_SOURCE_DIR}/data/ to a full path and the file() command stores it in DATA_FOLDER
@@ -32,11 +32,18 @@ configure_file("${PROJECT_SOURCE_DIR}/../Config.h.in" "${PROJECT_SOURCE_DIR}/inc
 ocv_include_directories("${OpenCV_INCLUDE_DIRS}" "${PROJECT_SOURCE_DIR}/include" )#for opencv.hpp
 
 # add executable
-add_executable( APCB_01_loadDisplaySave loadDisplaySave.cpp)
-add_executable( APCB_01_logo logo.cpp)
-add_executable( APCB_01_mat mat.cpp)
+add_executable( APCB_04_histograms histograms.cpp)
+add_executable( APCB_04_contentfinder contentfinder.cpp)
+add_executable( APCB_04_finder finder.cpp)
+add_executable( APCB_04_retrieve retrieve.cpp)
+add_executable( APCB_04_integral integral.cpp)
+add_executable( APCB_04_tracking tracking.cpp)
 
 # link libraries
-target_link_libraries( APCB_01_loadDisplaySave ${OpenCV_LIBS})
-target_link_libraries( APCB_01_logo ${OpenCV_LIBS})
-target_link_libraries( APCB_01_mat ${OpenCV_LIBS})
+target_link_libraries( APCB_04_histograms ${OpenCV_LIBS})
+target_link_libraries( APCB_04_contentfinder ${OpenCV_LIBS})
+target_link_libraries( APCB_04_finder ${OpenCV_LIBS})
+target_link_libraries( APCB_04_retrieve ${OpenCV_LIBS})
+target_link_libraries( APCB_04_integral ${OpenCV_LIBS})
+target_link_libraries( APCB_04_tracking ${OpenCV_LIBS})
+

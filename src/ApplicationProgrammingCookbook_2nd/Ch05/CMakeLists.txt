@@ -5,14 +5,14 @@
 cmake_minimum_required(VERSION 2.8)
 
 # define the project name
-set(project_name "APCookBook_Chapter01")
+set(project_name "APCookBook_Chapter05")
 
 # set the project namee
 project("${project_name}")
 
 # add opencv package to the project
 find_package( OpenCV REQUIRED )
-MESSAGE(�OpenCV version : ${OpenCV_VERSION}�)
+MESSAGE("OpenCV version : ${OpenCV_VERSION}")
 
 # ${PROJECT_SOURCE_DIR} is the name of the root directory of the project
 # TO_NATIVE_PATH converts the path ${PROJECT_SOURCE_DIR}/data/ to a full path and the file() command stores it in DATA_FOLDER
@@ -28,15 +28,18 @@ set(IMAGE_FOLDER "${DATA_ROOT_FOLDER}/images")
 configure_file("${PROJECT_SOURCE_DIR}/../Config.h.in" "${PROJECT_SOURCE_DIR}/include/Config.h")
 
 # add opencv include directories to the project
-# include_directories( ${OpenCV_INCLUDE_DIRS} "${PROJECT_SOURCE_DIR}/../include" ) 
+# include_directories( ${OpenCV_INCLUDE_DIRS} ) 
 ocv_include_directories("${OpenCV_INCLUDE_DIRS}" "${PROJECT_SOURCE_DIR}/include" )#for opencv.hpp
 
 # add executable
-add_executable( APCB_01_loadDisplaySave loadDisplaySave.cpp)
-add_executable( APCB_01_logo logo.cpp)
-add_executable( APCB_01_mat mat.cpp)
+add_executable( APCB_05_morphology morphology.cpp)
+add_executable( APCB_05_morpho2 morpho2.cpp)
+add_executable( APCB_05_mserFeatures mserFeatures.cpp)
+add_executable( APCB_05_segment segment.cpp)
 
 # link libraries
-target_link_libraries( APCB_01_loadDisplaySave ${OpenCV_LIBS})
-target_link_libraries( APCB_01_logo ${OpenCV_LIBS})
-target_link_libraries( APCB_01_mat ${OpenCV_LIBS})
+target_link_libraries( APCB_05_morphology ${OpenCV_LIBS})
+target_link_libraries( APCB_05_morpho2 ${OpenCV_LIBS})
+target_link_libraries( APCB_05_mserFeatures ${OpenCV_LIBS})
+target_link_libraries( APCB_05_segment ${OpenCV_LIBS})
+

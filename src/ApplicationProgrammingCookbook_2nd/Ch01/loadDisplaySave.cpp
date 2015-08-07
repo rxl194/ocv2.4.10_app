@@ -17,9 +17,13 @@
 \*------------------------------------------------------------------------------------------*/
 
 #include <iostream>
+#include <stdio.h>
+#include <string>
 
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
+
+#include "Config.h"
 
 void onMouse( int event, int x, int y, int flags, void* param)	{
 	
@@ -43,7 +47,9 @@ int main() {
               << image.cols << std::endl;
 
 	// read the input image as a gray-scale image
-	image=  cv::imread("puppy.bmp", CV_LOAD_IMAGE_GRAYSCALE); 
+  char imgFileName[1024];
+  sprintf(imgFileName, "%s/puppy.bmp", IMAGE_FOLDER);
+	image=  cv::imread(imgFileName, CV_LOAD_IMAGE_GRAYSCALE); 
 
     if (image.empty()) {  // error handling
         // no image has been created...

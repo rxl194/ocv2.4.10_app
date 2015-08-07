@@ -9,3 +9,4 @@ endif()
 
 add_subdirectory(tutorial)
 add_subdirectory(ApplicationProgrammingCookbook_2nd)
+add_subdirectory(MasteringOpenCVWithPracticalCVProjects)

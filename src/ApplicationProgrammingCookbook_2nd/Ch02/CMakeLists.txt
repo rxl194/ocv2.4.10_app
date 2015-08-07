@@ -5,14 +5,14 @@
 cmake_minimum_required(VERSION 2.8)
 
 # define the project name
-set(project_name "APCookBook_Chapter01")
+set(project_name "APCookBook_Chapter02")
 
 # set the project namee
 project("${project_name}")
 
 # add opencv package to the project
 find_package( OpenCV REQUIRED )
-MESSAGE(ï¿½OpenCV version : ${OpenCV_VERSION}ï¿½)
+MESSAGE(“OpenCV version : ${OpenCV_VERSION}”)
 
 # ${PROJECT_SOURCE_DIR} is the name of the root directory of the project
 # TO_NATIVE_PATH converts the path ${PROJECT_SOURCE_DIR}/data/ to a full path and the file() command stores it in DATA_FOLDER
@@ -32,11 +32,15 @@ configure_file("${PROJECT_SOURCE_DIR}/../Config.h.in" "${PROJECT_SOURCE_DIR}/inc
 ocv_include_directories("${OpenCV_INCLUDE_DIRS}" "${PROJECT_SOURCE_DIR}/include" )#for opencv.hpp
 
 # add executable
-add_executable( APCB_01_loadDisplaySave loadDisplaySave.cpp)
-add_executable( APCB_01_logo logo.cpp)
-add_executable( APCB_01_mat mat.cpp)
+add_executable( APCB_02_saltImage saltImage.cpp)
+add_executable( APCB_02_colorReduce colorReduce.cpp)
+add_executable( APCB_02_contrast contrast.cpp)
+add_executable( APCB_02_addImages addImages.cpp)
+add_executable( APCB_02_remapping remapping.cpp)
 
 # link libraries
-target_link_libraries( APCB_01_loadDisplaySave ${OpenCV_LIBS})
-target_link_libraries( APCB_01_logo ${OpenCV_LIBS})
-target_link_libraries( APCB_01_mat ${OpenCV_LIBS})
+target_link_libraries( APCB_02_saltImage ${OpenCV_LIBS})
+target_link_libraries( APCB_02_colorReduce ${OpenCV_LIBS})
+target_link_libraries( APCB_02_contrast ${OpenCV_LIBS})
+target_link_libraries( APCB_02_addImages ${OpenCV_LIBS})
+target_link_libraries( APCB_02_remapping ${OpenCV_LIBS})
