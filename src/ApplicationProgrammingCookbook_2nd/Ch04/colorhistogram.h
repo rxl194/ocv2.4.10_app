@@ -19,8 +19,8 @@
 #if !defined COLHISTOGRAM
 #define COLHISTOGRAM
 
-#include <opencv2\core\core.hpp>
-#include <opencv2\imgproc\imgproc.hpp>
+#include <opencv2/core/core.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
 
 class ColorHistogram {
 

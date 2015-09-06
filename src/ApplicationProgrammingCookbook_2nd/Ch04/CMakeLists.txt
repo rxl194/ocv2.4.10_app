@@ -33,7 +33,7 @@ ocv_include_directories("${OpenCV_INCLUDE_DIRS}" "${PROJECT_SOURCE_DIR}/include"
 
 # add executable
 add_executable( APCB_04_histograms histograms.cpp)
-add_executable( APCB_04_contentfinder contentfinder.cpp)
+add_executable( APCB_04_contentfinder contentFinder.cpp)
 add_executable( APCB_04_finder finder.cpp)
 add_executable( APCB_04_retrieve retrieve.cpp)
 add_executable( APCB_04_integral integral.cpp)

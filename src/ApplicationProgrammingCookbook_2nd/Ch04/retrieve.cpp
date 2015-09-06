@@ -18,8 +18,8 @@
 #include <iostream>
 using namespace std;
 
-#include <opencv2\core\core.hpp>
-#include <opencv2\highgui\highgui.hpp>
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
 
 #include "Config.h"
 #include "imageComparator.h"

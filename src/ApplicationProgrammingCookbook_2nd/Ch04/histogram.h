@@ -19,8 +19,8 @@
 #if !defined HISTOGRAM
 #define HISTOGRAM
 
-#include <opencv2\core\core.hpp>
-#include <opencv2\imgproc\imgproc.hpp>
+#include <opencv2/core/core.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
 
 // To create histograms of gray-level images
 class Histogram1D {
