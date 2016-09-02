@@ -1,0 +1,3 @@
+#!/bin/csh
+
+cmake -D OpenCV_DIR=/opt/ocv2.4.10/share/OpenCV ..
